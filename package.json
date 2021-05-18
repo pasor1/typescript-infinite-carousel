@@ -1,14 +1,14 @@
 {
-  "name": "ts-carousel",
+  "name": "typescript-infinite-carousel",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
+  "description": "Typescript Infinite Carousel",
+  "main": "dist/index.html",
   "scripts": {
     "start-server": "lite-server",
     "watch-typescript": "tsc -w",
     "build": "tsc"
   },
-  "author": "",
+  "author": "Simone Pasini",
   "license": "ISC",
   "dependencies": {},
   "devDependencies": {
