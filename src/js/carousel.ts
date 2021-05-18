@@ -1,6 +1,5 @@
 
 class Carousel {
-
   private containerSelector: string;
   private fetchCards: Function;
   private icon: string;
@@ -53,7 +52,6 @@ class Carousel {
     this.stepSize = this.cardWidth + (this.cardGutter * 2);
     this.chunkSize = 6;
     this.sliderPosition = 0;
-
 
     const carouselTemplate = `
       <div class="header">
@@ -108,10 +106,12 @@ class Carousel {
     this.showControlNext(true);
   }
 
+
   hideControls() {
     this.showControlPrevious(false);
     this.showControlNext(false);
   }
+
 
   showControlPrevious(status: boolean) {
     status === true
@@ -119,11 +119,13 @@ class Carousel {
       : this.controlPrevious.classList.add('hidden');
   }
 
+
   showControlNext(status: boolean) {
     status === true
       ? this.controlNext.classList.remove('hidden')
       : this.controlNext.classList.add('hidden');
   }
+
 
   scrollPrevious() {
     if (this.sliderPosition > 0) {
@@ -133,6 +135,7 @@ class Carousel {
     this.showControls();
   }
 
+
   scrollNext() {
     this.appendActivator();
     this.sliderPosition++;
@@ -140,12 +143,14 @@ class Carousel {
     this.showControls();
   }
 
+
   appendActivator() {
     const offsetRight = this.cardsScroll.offsetWidth - this.cardsScrollContainer.offsetWidth + this.cardsScroll.offsetLeft;
     if (offsetRight - this.stepSize < 0) {
       this.appendCards();
     }
   }
+
 
   showLoader(status: boolean) {
     if (status === true) {
@@ -170,8 +175,8 @@ class Carousel {
     }
   }
 
-  appendCards(cardsNum?: number) {
 
+  appendCards(cardsNum?: number) {
     const cardTemplate = (card: {
       image: string,
       type: contentType,
